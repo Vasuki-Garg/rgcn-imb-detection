@@ -1,17 +1,13 @@
 The repository is the official implementation for the **IJCAI'25** Social Good Track paper: **Detecting Illicit Massage Businesses by Leveraging Graph Machine Learning**
 
----
 
-About the Authors
-
----
-
-Usage
+## About the Authors
 
 
----
+## Usage
 
-## 📖 Citation
+
+## Citation
 
 If you use this code or find our work useful, please cite our paper:
 

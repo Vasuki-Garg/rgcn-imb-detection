@@ -11,9 +11,9 @@ Usage
 
 ---
 
-Citation
+## 📖 Citation
 
-If you find this repo useful, please cite our paper:
+If you use this code or find our work useful, please cite our paper:
 
 ```bibtex
 @inproceedings{garg2025graph,

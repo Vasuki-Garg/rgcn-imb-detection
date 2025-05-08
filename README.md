@@ -1,4 +1,4 @@
-The repository is the official implementation for the **IJCAI'25** Social Good Track paper: **Detecting Illicit Massage Businesses by Leveraging Graph Machine Learning**
+The repository is the official implementation for the **IJCAI'25** AI for Social Good Track paper: **Detecting Illicit Massage Businesses by Leveraging Graph Machine Learning**
 
 ## About the Authors
 **Vasuki Garg** is a PhD student in Industrial and Systems Engineering at NC State University. He holds an MS from Politecnico di Milano, Italy and a BEng from the University of Southampton, UK. His research applies machine learning and optimization to social impact problems, including human trafficking detection and decision-focused modeling. He specializes in graph ML, NLP, and data-driven analytics.

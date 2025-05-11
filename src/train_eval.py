@@ -84,6 +84,24 @@ def evaluate(model_cp, hg, mask, batch_size, sampler_type, n_neighbors, best_mod
     auc = roc_auc_score(y_true, y_pred_probs[:, 1])
     return acc, precision, recall, f1, cm, auc
 
+def extract_embeddings(model, hg, mask, batch_size, sampler_type, n_neighbors, best_model_fp=None):
+    if best_model_fp:
+        model.load_state_dict(torch.load(best_model_fp))
+    model.to(hg.device)
+    model.eval()
+    features = hg.ndata['feat']
+    sampler = dgl.dataloading.MultiLayerFullNeighborSampler(len(model.convs)) if sampler_type == 1 \
+              else dgl.dataloading.MultiLayerNeighborSampler([n_neighbors]*len(model.convs))
+    dataloader = DataLoader(
+        hg, {'bizIdx': torch.where(mask)[0]}, sampler,
+        batch_size=batch_size, shuffle=False, drop_last=False, num_workers=0)
+    embeddings_list = []
+    for input_nodes, output_nodes, blocks in dataloader:
+        h = {k: features[k][input_nodes[k]].to(hg.device) for k in input_nodes}
+        blocks = [b.to(hg.device) for b in blocks]
+        embeddings = model(blocks, h, return_embeddings=True)
+        embeddings_list.append(embeddings.cpu().numpy())
+    return np.concatenate(embeddings_list, axis=0)
 
 # =====================
 # Training functions

@@ -19,7 +19,7 @@ from dgl.dataloading import MultiLayerFullNeighborSampler, DataLoader
 device = setup_environment()
 
 # --- Load Data ---
-data_path = '/content/drive/MyDrive/RGCN Classification/data/real_data.csv'
+data_path = '/content/drive/MyDrive/RGCN_IMB_Classification/data.csv'
 df = load_and_preprocess_data(data_path)
 df, _, _, _ = index_columns(df)
 
@@ -139,6 +139,6 @@ plot_neighborhood(dataloader, N_plots=1)
 
 # --- Save Results ---
 df_results = pd.DataFrame(all_results)
-df_results.to_csv('/content/drive/MyDrive/IMB_detection_output.csv', index=False)
+df_results.to_csv('/content/drive/MyDrive/RGCN_IMB_Classification/output.csv', index=False)
 print("All runs completed. Results saved.")
 plot_tsne(val_embeddings, val_labels, title=f"t-SNE for {model_name}")

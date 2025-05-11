@@ -11,7 +11,8 @@ from src.train_eval import train, evaluate, extract_embeddings
 import numpy as np
 import pandas as pd
 from src.visualization import plot_tsne
-
+from src.visualization import plot_neighborhood
+from dgl.dataloading import MultiLayerFullNeighborSampler, DataLoader
 
 
 # --- Setup ---
@@ -125,6 +126,16 @@ for num_layers in num_layers_list:
                                         'f1': metrics[3],
                                         'auc': metrics[5]
                                     })
+
+# --- Plot Graph Neighborhood ---
+# Use validation nodes to visualize subgraph structure
+sampler = MultiLayerFullNeighborSampler(4)
+dataloader = DataLoader(
+    hg, {'bizIdx': torch.where(split_mask['valid'])[0]}, sampler,
+    batch_size=1, shuffle=False, drop_last=False, num_workers=0
+)
+plot_neighborhood(dataloader, N_plots=1)
+
 
 # --- Save Results ---
 df_results = pd.DataFrame(all_results)

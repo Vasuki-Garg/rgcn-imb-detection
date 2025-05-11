@@ -125,5 +125,5 @@ for num_layers in num_layers_list:
 
 # --- Save Results ---
 df_results = pd.DataFrame(all_results)
-df_results.to_csv('/content/drive/MyDrive/RGCN Classification/CO_github_post_code_results.csv', index=False)
+df_results.to_csv('/content/drive/MyDrive/IMB_detection_output.csv', index=False)
 print("All runs completed. Results saved.")

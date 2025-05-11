@@ -10,6 +10,9 @@ from src.models import RGCN, LabelSmoothing
 from src.train_eval import train, evaluate, extract_embeddings
 import numpy as np
 import pandas as pd
+from src.visualization import plot_tsne
+
+
 
 # --- Setup ---
 device = setup_environment()
@@ -127,3 +130,4 @@ for num_layers in num_layers_list:
 df_results = pd.DataFrame(all_results)
 df_results.to_csv('/content/drive/MyDrive/IMB_detection_output.csv', index=False)
 print("All runs completed. Results saved.")
+plot_tsne(val_embeddings, val_labels, title=f"t-SNE for {model_name}")

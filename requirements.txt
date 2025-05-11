@@ -1,0 +1,17 @@
+# Core ML & Graph Libraries
+torch==2.4.0
+dgl==2.4.0
+
+# Data Processing
+pandas>=1.5.3
+numpy>=1.23.0
+
+# ML Evaluation & Modeling
+scikit-learn>=1.1.3
+
+# Visualization
+matplotlib>=3.5.0
+seaborn>=0.11.2
+
+# Dimensionality Reduction
+scikit-learn  # includes PCA and TSNE

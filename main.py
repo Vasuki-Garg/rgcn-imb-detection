@@ -86,7 +86,7 @@ for num_layers in num_layers_list:
                                     model_name = f"model_{smoothing_coeff}_{num_layers}_{batch_size}_{h_feats}_{dropout}_{epochs}_{es_criteria}_{sampler_type}_{n_neighbors}_bn{bn}_self{self_loop}.pt"
 
                                     train_losses, val_losses = train(
-                                        hg.to(device), split_mask, model.to(device), epochs, batch_size, sampler_type, n_neighbors, weight_values, None,
+                                        hg.to(device), split_mask, model.to(device), epochs, batch_size, sampler_type, n_neighbors, weight_values,
                                         device, save_path=model_name, loss_fn=loss_fn, lr=0.001, es_criteria=es_criteria, verbose=True, weight=True)
 
                                     metrics = evaluate(model.to(device), hg.to(device), split_mask['valid'].to(device), batch_size, sampler_type, n_neighbors, best_model_fp=model_name)

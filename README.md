@@ -97,7 +97,7 @@ This repository includes a dummy dataset for demonstration purposes. The origina
 
 ## Citation
 
-If you use this code or find our work useful, please cite our paper:
+If you use the dataset, code or find our work useful, please cite our paper:
 
 ```bibtex
 @inproceedings{garg2025graph,

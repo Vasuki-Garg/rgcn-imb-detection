@@ -12,10 +12,13 @@ This repository contains the official implementation for our **IJCAI 2025** pape
    - Use the provided synthetic `data.csv` file for demonstration, or request access to the original (restricted) data through the Global Emancipation Network (GEN).
    - The dataset is constructed by integrating multi-source information to create an information-rich heterogeneous graph for massage businesses. It includes business-level, review-level, reviewer-level, geospatial, and demographic features to support illicit massage business (IMB) detection.
    - The dataset includes:
-     - Business features (binary features using Yelp business metadata and RubMaps business listings):
-     -    yelp_close9, yelp_close10, yelp_close11, yelp_avg_rating_moreThan4, yelp_avg_rating_lessThan2, yelp_reviewRating_min_is5, yelp_reviewRating_max_is1, yelp_massageCat, yelp_spaCat, yelp_phone_advertisement, yelp_business_name_combine, yelp_category_reflexology, owner_listed_worker_out_of_state
-     - Reviewer features
-     - Review features
+     - Business features (binary features using Yelp business and RubMaps business metadata, GIS data, U.S. Census Bureau and National Land Cover Database (NLCD) ):
+        -    yelp_close9, yelp_close10, yelp_close11, yelp_avg_rating_moreThan4, yelp_avg_rating_lessThan2, yelp_reviewRating_min_is5, yelp_reviewRating_max_is1, yelp_massageCat, yelp_spaCat, yelp_phone_advertisement, yelp_business_name_combine, yelp_category_reflexology, owner_listed_worker_out_of_state
+     - Review features (numerical features using Yelp review text, analyzed with NLP techniques and pre-trained Doc2Vec and Sentiment Analysis models):
+        - review_vector, roberta_neu, roberta_pos, roberta_neg, reviewRating, lexicon_score, lexicon_prediction
+     - Reviewer features (features using Yelp reviewer metadata):
+        - authorName, authorGender
+     - Label: The label feature indicates whether a business is illicit (1) or not (0)
 
 2. **Save the Dataset to Google Drive**:
    - Create the following folder structure in your Google Drive:

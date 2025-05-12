@@ -12,7 +12,10 @@ furnished to do so, subject to the following conditions:
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
 
-This work builds upon the basic RGCN tutorial from the Basics of Graph Neural Networks (https://www.graphneuralnets.com/p/basics-of-gnns/) which uses the DGL RGCN approach (https://github.com/dmlc/dgl/blob/master/examples/pytorch/rgcn-hetero/model.py).
+This work builds upon the basic RGCN tutorial from the Basics of Graph Neural 
+Networks (https://www.graphneuralnets.com/p/basics-of-gnns/) which uses the
+DGL RGCN approach (https://github.com/dmlc/dgl/blob/master/examples/pytorch/
+rgcn-hetero/model.py).
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,

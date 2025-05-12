@@ -71,8 +71,8 @@ def evaluate(model_cp, hg, mask, batch_size, sampler_type, n_neighbors, best_mod
         h = {k: features[k][input_nodes[k]].to(hg.device) for k in input_nodes}
         blocks = [b.to(hg.device) for b in blocks]
         logits = model(blocks, h)
-        y_pred_probs.append(logits.softmax(dim=1).cpu().numpy())
-        logits_list.append(logits.cpu().detach().numpy())
+        y_pred_probs.append(logits.softmax(dim=1).detach().cpu().numpy())
+        logits_list.append(logits.detach().cpu().numpy())
         y_true.append(labels[output_nodes['bizIdx']].cpu().numpy())
     y_true = np.concatenate(y_true)
     y_pred_probs = np.concatenate(y_pred_probs)

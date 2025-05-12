@@ -1,4 +1,4 @@
-# IMB-RGCN Classification Pipeline
+# IMB-RGCN Detection Pipeline
 
 This repository contains the official implementation for our **IJCAI 2025** paper in the *AI for Social Good* track:
 
@@ -11,10 +11,9 @@ This repository contains the official implementation for our **IJCAI 2025** pape
 1. **Obtain the Dataset**:
    - Use the provided synthetic `data.csv` file for demonstration, or request access to the original (restricted) data through the Global Emancipation Network (GEN).
    - The dataset includes:
-     - Business metadata (e.g., Yelp-based features)
-     - Reviewer details
-     - Review embeddings (e.g., Doc2Vec, BERT)
-     - Census and geospatial information
+     - Business features
+     - Reviewer features
+     - Review features
 
 2. **Save the Dataset to Google Drive**:
    - Create the following folder structure in your Google Drive:

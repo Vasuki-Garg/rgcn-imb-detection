@@ -59,6 +59,7 @@ def graph_hg(hg_tmp, **kwargs):
     ]
 
     plt.legend(handles=legend_handles, loc="upper left", fontsize=18, markerscale=8, frameon=True, fancybox=True, framealpha=1, borderpad=2, labelspacing=3, handletextpad=2)
+    plt.savefig('/content/drive/MyDrive/RGCN_IMB_Detection/sub_graph_network.png')
     plt.show()
 
 
@@ -91,4 +92,5 @@ def plot_tsne(embeddings, labels, title="t-SNE Visualization of Test Embeddings"
     plt.yticks(fontsize=18)
     plt.title(title, fontsize=20)
     plt.grid(True)
+    plt.savefig('/content/drive/MyDrive/RGCN_IMB_Detection/t_sne.png')
     plt.show()

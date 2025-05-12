@@ -1,51 +1,86 @@
-The repository is the official implementation for the **IJCAI'25** AI for Social Good Track paper: **Detecting Illicit Massage Businesses by Leveraging Graph Machine Learning**
-
 # IMB-RGCN Classification Pipeline
 
-# Dataset Download and Setup
+This repository contains the official implementation for our **IJCAI 2025** paper in the *AI for Social Good* track:
 
-1. **Obtain the Synthetic Dataset**:
-   - Request or generate the cleaned dataset file `data.csv` containing:
-     - Business metadata (e.g., Yelp features)
-     - Reviewer information
-     - Review embeddings (from Doc2Vec or transformer-based models)
-     - Census and geospatial features
+**"Detecting Illicit Massage Businesses by Leveraging Graph Machine Learning"**
+
+---
+
+## 📁 Dataset Download and Setup
+
+1. **Obtain the Dataset**:
+   - Use the provided synthetic `data.csv` file for demonstration, or request access to the original (restricted) data through the Global Emancipation Network (GEN).
+   - The dataset includes:
+     - Business metadata (e.g., Yelp-based features)
+     - Reviewer details
+     - Review embeddings (e.g., Doc2Vec, BERT)
+     - Census and geospatial information
 
 2. **Save the Dataset to Google Drive**:
    - Create the following folder structure in your Google Drive:
      ```
      /MyDrive/RGCN_IMB_Detection/
      ```
-   - Place your `data.csv` file inside this folder:
+   - Place your `data.csv` file in that folder:
      ```
      /MyDrive/RGCN_IMB_Detection/data.csv
      ```
-   - This path must match the one used in `main.py`:
+   - This path is referenced in the code as:
      ```python
      data_path = '/content/drive/MyDrive/RGCN_IMB_Detection/data.csv'
      ```
 
-## Running the Project in Google Colab
-You can execute this project end-to-end in Google Colab. Here's how:
+---
 
-## 1. Clone the repository
+## 🚀 Running the Project in Google Colab
+
+Run the complete pipeline on Colab by following these steps:
+
+### ✅ Step 1: Clone the Repository
+```python
 !git clone https://github.com/Vasuki-Garg/rgcn-imb-detection.git
 %cd rgcn-imb-detection
+```
 
-## 2. Install dependencies
+### ✅ Step 2: Install Dependencies
+```python
 !pip install torch==2.4.0
 !pip install dgl -f https://data.dgl.ai/wheels/torch-2.4/repo.html
 !pip install -r requirements.txt
+```
 
-## 3. Mount Google Drive
+### ✅ Step 3: Mount Google Drive
+```python
 from google.colab import drive
 drive.mount('/content/drive')
-
-## 4. Ensure your dataset is saved at:
+```
+Ensure the dataset is stored at:
+```
 /content/drive/MyDrive/RGCN_IMB_Detection/data.csv
+```
 
-## 5. Run the main pipeline
+### ✅ Step 4: Run the Main Script
+```python
 !python main.py
+```
+
+This runs:
+- Data preprocessing and graph construction
+- Feature engineering for business, review, and reviewer nodes
+- RGCN model training with early stopping
+- Evaluation and embedding extraction
+- t-SNE and graph neighborhood visualizations
+- Saving model checkpoints, results, and plots to Google Drive
+
+---
+
+## 💾 Output Files (in Google Drive)
+- `final_trained_model.pt`: Final model weights
+- `val_embeddings_<model>.csv`: Validation node embeddings with labels
+- `output.csv`: Aggregated metrics from each run
+- `graph_plot.png`, `tsne_plot.png`: Optional visualizations
+
+---
 
 ## About the Authors
 **Vasuki Garg** is a PhD student in Industrial and Systems Engineering at NC State University. He holds an MS from Politecnico di Milano, Italy and a BEng from the University of Southampton, UK. His research applies machine learning and optimization to social impact problems, including human trafficking detection and decision-focused modeling. He specializes in graph ML, NLP, and data-driven analytics.
@@ -63,7 +98,7 @@ This repository includes a dummy dataset for demonstration purposes. The origina
 
 If you use this code or find our work useful, please cite our paper:
 
-```bibtex
+bibtex
 @inproceedings{garg2025graph,
   title     = {Detecting Illicit Massage Businesses by Leveraging Graph Machine Learning},
   author    = {Garg, Vasuki and Özaltın, Y. Osman and Mayorga, E. Maria and Caltigirone, Sherrie},
@@ -77,4 +112,5 @@ If you use this code or find our work useful, please cite our paper:
   note      = {AI and Social Good Track},
   url       = {https://github.com/Vasuki-Garg/rgcn-imb-detection}
 }
+
 

@@ -7,7 +7,7 @@ This repository contains the official implementation for our **IJCAI 2025** pape
 ---
 
 ## 📁 Dataset Download and Setup
-**[Click here to download the synthetic dataset from Google Drive]([https://drive.google.com/file/d/1P0FJHnXXXXXX_SAMPLE_LINK/view?usp=sharing](https://drive.google.com/file/d/1bJYk59VQZ-2zDdBYdY5jjmTtVIBeZjAK/view?usp=sharing))**
+**[Click here to download the synthetic dataset from Google Drive](https://drive.google.com/file/d/1bJYk59VQZ-2zDdBYdY5jjmTtVIBeZjAK/view?usp=sharing)**
 1. **Obtain the Dataset**:
    - Use the provided synthetic `data.csv` file for demonstration, or request access to the original (restricted) data through the Global Emancipation Network (GEN).
    - The dataset includes:

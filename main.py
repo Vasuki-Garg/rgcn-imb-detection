@@ -134,7 +134,7 @@ dataloader = DataLoader(
     hg, {'bizIdx': torch.where(split_mask['valid'])[0]}, sampler,
     batch_size=1, shuffle=False, drop_last=False, num_workers=0
 )
-plot_neighborhood(dataloader, N_plots=1)
+plot_neighborhood(hg, dataloader, N_plots=1)
 
 
 # --- Save Results ---

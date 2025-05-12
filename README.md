@@ -10,15 +10,37 @@ This repository contains the official implementation for our **IJCAI 2025** pape
 **[Click here to download the synthetic dataset from Google Drive](https://drive.google.com/file/d/1bJYk59VQZ-2zDdBYdY5jjmTtVIBeZjAK/view?usp=sharing)**
 
 # Dataset Description:
-- The dataset is constructed by integrating multi-source information to create an information-rich heterogeneous graph for massage businesses. It includes business-level, review-level, reviewer-level, geospatial, and demographic features to support illicit massage business (IMB) detection.
-   - The dataset includes:
-     - **Business features** (binary features using Yelp business and RubMaps business metadata, GIS data, U.S. Census Bureau and National Land Cover Database (NLCD):
-        -    yelp_close9, yelp_close10, yelp_close11, yelp_avg_rating_moreThan4, yelp_avg_rating_lessThan2, yelp_reviewRating_min_is5, yelp_reviewRating_max_is1, yelp_massageCat, yelp_spaCat, yelp_phone_advertisement, yelp_business_name_combine, yelp_category_reflexology, owner_listed_worker_out_of_state, min_dist_base_high, min_dist_base_low, min_dist_police_low, census_pct_nonwhite_high, census_avg_household_size_high, census_pct_20_to_29_low, census_pct_housing_vacant_low, census_pct_households_with_children_low, census_pct_over25_with_bachelors_low, census_pct_manufacturing_industry_low, landcover_type_developed_high_intensity
-     - **Review features** (numerical features using Yelp review text, analyzed with NLP techniques and pre-trained Doc2Vec and Sentiment Analysis models):
-        - review_vector, roberta_neu, roberta_pos, roberta_neg, reviewRating, lexicon_score, lexicon_prediction
-     - **Reviewer features** (features using Yelp reviewer metadata):
-        - authorName, authorGender
-     - **Label**: The label feature indicates whether a business is illicit (1) or non-illicit (0)
+This dataset is constructed by integrating multi-source information to build an information-rich heterogeneous graph for detecting illicit massage businesses (IMBs). It combines business-level metadata, review content, reviewer information, geospatial features, and demographic indicators to support relational learning and classification.
+The dataset consists of the following feature categories (Nodes):
+
+# Business Features
+Derived from Yelp and RubMaps business metadata, GIS data, the U.S. Census Bureau, and the National Land Cover Database (NLCD). These are primarily binary features, created through quantile-based thresholding or one-hot encoding:
+```
+yelp_close9, yelp_close10, yelp_close11, 
+yelp_avg_rating_moreThan4, yelp_avg_rating_lessThan2, 
+yelp_reviewRating_min_is5, yelp_reviewRating_max_is1, 
+yelp_massageCat, yelp_spaCat, yelp_phone_advertisement, 
+yelp_business_name_combine, yelp_category_reflexology, 
+owner_listed_worker_out_of_state, min_dist_base_high, min_dist_base_low, 
+min_dist_police_low, census_pct_nonwhite_high, census_avg_household_size_high, 
+census_pct_20_to_29_low, census_pct_housing_vacant_low, 
+census_pct_households_with_children_low, census_pct_over25_with_bachelors_low, 
+census_pct_manufacturing_industry_low, landcover_type_developed_high_intensity
+```
+# Review Features
+Extracted from Yelp review texts using NLP techniques and pre-trained models. These are numerical features, including dense embeddings and sentiment scores:
+```
+review_vector, roberta_neu, roberta_pos, roberta_neg, 
+reviewRating, lexicon_score, lexicon_prediction
+```
+# Reviewer Features
+Based on Yelp user metadata and enriched using external tools (e.g., gender prediction libraries):
+```
+authorName, authorGender
+```
+# Label
+A binary classification label indicating whether a business is illicit (1) or non-illicit (0). The label is derived from RubMaps review activity and business license status.
+
 1. **Dataset**:
    - Use the provided synthetic `data.csv` file for demonstration, or request access to the original (restricted) data through the Global Emancipation Network (GEN).
 

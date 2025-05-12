@@ -18,7 +18,7 @@ This repository contains the official implementation for our **IJCAI 2025** pape
         - review_vector, roberta_neu, roberta_pos, roberta_neg, reviewRating, lexicon_score, lexicon_prediction
      - Reviewer features (features using Yelp reviewer metadata):
         - authorName, authorGender
-     - Label: The label feature indicates whether a business is illicit (1) or not (0)
+     - Label: The label feature indicates whether a business is illicit (1) or non-illicit (0)
 
 2. **Save the Dataset to Google Drive**:
    - Create the following folder structure in your Google Drive:

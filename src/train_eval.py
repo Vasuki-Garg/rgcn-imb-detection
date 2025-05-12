@@ -101,7 +101,7 @@ def extract_embeddings(model, hg, mask, batch_size, sampler_type, n_neighbors, b
         h = {k: features[k][input_nodes[k]].to(hg.device) for k in input_nodes}
         blocks = [b.to(hg.device) for b in blocks]
         embeddings = model(blocks, h, return_embeddings=True)
-        embeddings_list.append(embeddings.cpu().numpy())
+        embeddings_list.append(embeddings.detach().cpu().numpy())
     return np.concatenate(embeddings_list, axis=0)
 
 # =====================

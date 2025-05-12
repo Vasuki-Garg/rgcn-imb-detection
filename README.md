@@ -1,4 +1,4 @@
-# IMB-RGCN Detection Pipeline
+# RGCN_IMB_Detection Pipeline
 
 This repository contains the official implementation for our **IJCAI 2025** paper in the *AI for Social Good* track:
 
@@ -7,7 +7,7 @@ This repository contains the official implementation for our **IJCAI 2025** pape
 ---
 
 ## 📁 Dataset Download and Setup
-
+**[Click here to download the synthetic dataset from Google Drive]([https://drive.google.com/file/d/1P0FJHnXXXXXX_SAMPLE_LINK/view?usp=sharing](https://drive.google.com/file/d/1bJYk59VQZ-2zDdBYdY5jjmTtVIBeZjAK/view?usp=sharing))**
 1. **Obtain the Dataset**:
    - Use the provided synthetic `data.csv` file for demonstration, or request access to the original (restricted) data through the Global Emancipation Network (GEN).
    - The dataset includes:
@@ -43,8 +43,10 @@ Run the complete pipeline on Colab by following these steps:
 
 ### ✅ Step 2: Install Dependencies
 ```python
+!pip uninstall torch -y
 !pip install torch==2.4.0
-!pip install dgl -f https://data.dgl.ai/wheels/torch-2.4/repo.html
+!pip uninstall dgl -y
+!pip install dgl -f https://data.dgl.ai/wheels/torch-2.4/dgl-2.4.0-cp311-cp311-manylinux1_x86_64.whl
 !pip install -r requirements.txt
 ```
 

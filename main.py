@@ -19,7 +19,7 @@ from dgl.dataloading import MultiLayerFullNeighborSampler, DataLoader
 device = setup_environment()
 
 # --- Load Data ---
-data_path = '/content/drive/MyDrive/RGCN_IMB_Classification/data.csv'
+data_path = '/content/drive/MyDrive/RGCN_IMB_Detection/data.csv'
 df = load_and_preprocess_data(data_path)
 df, _, _, _ = index_columns(df)
 
@@ -108,7 +108,7 @@ for num_layers in num_layers_list:
 
                                     # Save embeddings (optional)
                                     pd.DataFrame(val_embeddings).assign(label=val_labels).to_csv(
-                                        f"/content/drive/MyDrive/RGCN Classification/val_embeddings_{model_name}.csv", index=False)
+                                        f"/content/drive/MyDrive/RGCN_IMB_Detection/val_embeddings_{model_name}.csv", index=False)
 
                                     all_results.append({
                                         'num_layers': num_layers,
@@ -136,9 +136,13 @@ dataloader = DataLoader(
 )
 plot_neighborhood(hg, dataloader, N_plots=1)
 
+# Save final model explicitly
+final_model_path = "/content/drive/MyDrive/RGCN_IMB_Detection/final_trained_model.pt"
+torch.save(model.state_dict(), final_model_path)
+print(f"Final model saved to {final_model_path}")
 
 # --- Save Results ---
 df_results = pd.DataFrame(all_results)
-df_results.to_csv('/content/drive/MyDrive/RGCN_IMB_Classification/output.csv', index=False)
+df_results.to_csv('/content/drive/MyDrive/RGCN_IMB_Detection/output.csv', index=False)
 print("All runs completed. Results saved.")
 plot_tsne(val_embeddings, val_labels, title=f"t-SNE for {model_name}")

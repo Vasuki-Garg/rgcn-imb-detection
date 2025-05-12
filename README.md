@@ -6,7 +6,7 @@ This repository contains the official implementation for our **IJCAI 2025** pape
 
 ---
 
-## 📁 Dataset Download and Setup
+## Dataset Download and Setup
 **[Click here to download the synthetic dataset from Google Drive](https://drive.google.com/file/d/1bJYk59VQZ-2zDdBYdY5jjmTtVIBeZjAK/view?usp=sharing)**
 1. **Obtain the Dataset**:
    - Use the provided synthetic `data.csv` file for demonstration, or request access to the original (restricted) data through the Global Emancipation Network (GEN).
@@ -31,17 +31,17 @@ This repository contains the official implementation for our **IJCAI 2025** pape
 
 ---
 
-## 🚀 Running the Project in Google Colab
+## Running the Project in Google Colab
 
 Run the complete pipeline on Colab by following these steps:
 
-### ✅ Step 1: Clone the Repository
+### Step 1: Clone the Repository
 ```python
 !git clone https://github.com/Vasuki-Garg/rgcn-imb-detection.git
 %cd rgcn-imb-detection
 ```
 
-### ✅ Step 2: Install Dependencies
+### Step 2: Install Dependencies
 ```python
 !pip uninstall torch -y
 !pip install torch==2.4.0
@@ -50,7 +50,7 @@ Run the complete pipeline on Colab by following these steps:
 !pip install -r requirements.txt
 ```
 
-### ✅ Step 3: Mount Google Drive
+### Step 3: Mount Google Drive
 ```python
 from google.colab import drive
 drive.mount('/content/drive')
@@ -60,7 +60,7 @@ Ensure the dataset is stored at:
 /content/drive/MyDrive/RGCN_IMB_Detection/data.csv
 ```
 
-### ✅ Step 4: Run the Main Script
+### Step 4: Run the Main Script
 ```python
 !python main.py
 ```
@@ -75,7 +75,7 @@ This runs:
 
 ---
 
-## 💾 Output Files (in Google Drive)
+## Output Files (in Google Drive)
 - `final_trained_model.pt`: Final model weights
 - `val_embeddings_<model>.csv`: Validation node embeddings with labels
 - `output.csv`: Aggregated metrics from each run

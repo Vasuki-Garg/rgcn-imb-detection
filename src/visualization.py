@@ -66,7 +66,7 @@ def plot_neighborhood(hg, dataloader, N_plots=5):
     for i, (input_nodes, output_nodes, blocks) in enumerate(dataloader):
         if i >= N_plots:
             break
-        hg_tmp = dgl.node_subgraph(dataloader.g, input_nodes)
+        hg_tmp = dgl.node_subgraph(hg, input_nodes)
         graph_hg(hg_tmp)
 
 

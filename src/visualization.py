@@ -62,7 +62,7 @@ def graph_hg(hg_tmp, **kwargs):
     plt.show()
 
 
-def plot_neighborhood(dataloader, N_plots=5):
+def plot_neighborhood(hg, dataloader, N_plots=5):
     for i, (input_nodes, output_nodes, blocks) in enumerate(dataloader):
         if i >= N_plots:
             break

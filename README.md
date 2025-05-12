@@ -8,10 +8,12 @@ This repository contains the official implementation for our **IJCAI 2025** pape
 
 ## Dataset Download and Setup
 **[Click here to download the synthetic dataset from Google Drive](https://drive.google.com/file/d/1bJYk59VQZ-2zDdBYdY5jjmTtVIBeZjAK/view?usp=sharing)**
-1. **Obtain the Dataset**:
+1. **Dataset**:
    - Use the provided synthetic `data.csv` file for demonstration, or request access to the original (restricted) data through the Global Emancipation Network (GEN).
+   - The dataset is constructed by integrating multi-source information to create an information-rich heterogeneous graph for massage businesses. It includes business-level, review-level, reviewer-level, geospatial, and demographic features to support illicit massage business (IMB) detection.
    - The dataset includes:
-     - Business features
+     - Business features (binary features using Yelp business metadata and RubMaps business listings):
+     -    yelp_close9, yelp_close10, yelp_close11, yelp_avg_rating_moreThan4, yelp_avg_rating_lessThan2, yelp_reviewRating_min_is5, yelp_reviewRating_max_is1, yelp_massageCat, yelp_spaCat, yelp_phone_advertisement, yelp_business_name_combine, yelp_category_reflexology, owner_listed_worker_out_of_state
      - Reviewer features
      - Review features
 

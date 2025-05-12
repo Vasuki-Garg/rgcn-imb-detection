@@ -1,5 +1,58 @@
 The repository is the official implementation for the **IJCAI'25** AI for Social Good Track paper: **Detecting Illicit Massage Businesses by Leveraging Graph Machine Learning**
 
+# IMB-RGCN Classification Pipeline
+
+## 📁 Dataset Download and Setup
+
+1. **Obtain the Synthetic Dataset**:
+   - Request or generate the cleaned dataset file `data.csv` containing:
+     - Business metadata (e.g., Yelp features)
+     - Reviewer information
+     - Review embeddings (from Doc2Vec or transformer-based models)
+     - Census and geospatial features
+
+2. **Save the Dataset to Google Drive**:
+   - Create the following folder structure in your Google Drive:
+     ```
+     /MyDrive/RGCN_IMB_Detection/
+     ```
+   - Place your `data.csv` file inside this folder:
+     ```
+     /MyDrive/RGCN_IMB_Detection/data.csv
+     ```
+   - This path must match the one used in `main.py`:
+     ```python
+     data_path = '/content/drive/MyDrive/RGCN_IMB_Detection/data.csv'
+     ```
+
+## 🚀 Running the Project in Google Colab
+
+You can execute this project end-to-end in Google Colab. Here's how:
+
+## 1. Clone the repository
+```python
+!git clone https://github.com/Vasuki-Garg/rgcn-imb-detection.git
+%cd rgcn-imb-detection
+
+## 2. Install dependencies
+```python
+!pip install torch==2.4.0
+!pip install dgl -f https://data.dgl.ai/wheels/torch-2.4/repo.html
+!pip install -r requirements.txt
+
+# 3. Mount Google Drive
+```python
+from google.colab import drive
+drive.mount('/content/drive')
+
+# 4. Ensure your dataset is saved at:
+```python
+# /content/drive/MyDrive/RGCN_IMB_Detection/data.csv
+
+# 5. Run the main pipeline
+```python
+!python main.py
+
 ## About the Authors
 **Vasuki Garg** is a PhD student in Industrial and Systems Engineering at NC State University. He holds an MS from Politecnico di Milano, Italy and a BEng from the University of Southampton, UK. His research applies machine learning and optimization to social impact problems, including human trafficking detection and decision-focused modeling. He specializes in graph ML, NLP, and data-driven analytics.
 

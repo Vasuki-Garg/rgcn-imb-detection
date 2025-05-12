@@ -2,7 +2,7 @@ The repository is the official implementation for the **IJCAI'25** AI for Social
 
 # IMB-RGCN Classification Pipeline
 
-## 📁 Dataset Download and Setup
+## Dataset Download and Setup
 
 1. **Obtain the Synthetic Dataset**:
    - Request or generate the cleaned dataset file `data.csv` containing:
@@ -25,32 +25,27 @@ The repository is the official implementation for the **IJCAI'25** AI for Social
      data_path = '/content/drive/MyDrive/RGCN_IMB_Detection/data.csv'
      ```
 
-## 🚀 Running the Project in Google Colab
+## Running the Project in Google Colab
 
 You can execute this project end-to-end in Google Colab. Here's how:
 
 ## 1. Clone the repository
-```python
 !git clone https://github.com/Vasuki-Garg/rgcn-imb-detection.git
 %cd rgcn-imb-detection
 
 ## 2. Install dependencies
-```python
 !pip install torch==2.4.0
 !pip install dgl -f https://data.dgl.ai/wheels/torch-2.4/repo.html
 !pip install -r requirements.txt
 
 # 3. Mount Google Drive
-```python
 from google.colab import drive
 drive.mount('/content/drive')
 
 # 4. Ensure your dataset is saved at:
-```python
-# /content/drive/MyDrive/RGCN_IMB_Detection/data.csv
+/content/drive/MyDrive/RGCN_IMB_Detection/data.csv
 
 # 5. Run the main pipeline
-```python
 !python main.py
 
 ## About the Authors

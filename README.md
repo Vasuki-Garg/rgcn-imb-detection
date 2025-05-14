@@ -121,7 +121,7 @@ This runs:
 
 **Maria E. Mayorga** is a Professor at NC State specializing in personalized medicine and health systems. She earned her MS and PhD from UC Berkeley. Her work applies mathematical and stochastic modeling to health care operations, emergency response, and humanitarian logistics. She was named an IISE Fellow in 2022.
 
-**Sherrie Caltagirone** is the Founder and Executive Director of the Global Emancipation Network (GEN), a nonprofit leveraging data analytics to combat human trafficking. Previously, she was a Policy Advisor at Orphan Secure and began her anti-trafficking work with the Protection Project at Johns Hopkins University.
+**Sherrie Bosisto** is the Founder and Executive Director of the Global Emancipation Network (GEN), a nonprofit leveraging data analytics to combat human trafficking. Previously, she was a Policy Advisor at Orphan Secure and began her anti-trafficking work with the Protection Project at Johns Hopkins University.
 
 ## Usage
 This repository includes a dummy dataset for demonstration purposes. The original datasets used in the study contain sensitive information and are available upon request from the Global Emancipation Network (GEN).

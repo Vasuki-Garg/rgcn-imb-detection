@@ -41,6 +41,8 @@ authorName, authorGender
 ### Label
 A binary classification label indicating whether a business is illicit (1) or non-illicit (0). The label is derived from RubMaps review activity and business license status.
 
+## Setup
+
 1. **Dataset**:
    - Use the provided synthetic `data.csv` file for demonstration, or request access to the original (restricted) data through the Global Emancipation Network (GEN).
 

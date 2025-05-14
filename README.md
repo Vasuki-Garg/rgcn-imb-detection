@@ -133,7 +133,7 @@ If you use the dataset, code or find our work useful, please cite our paper:
 ```bibtex
 @inproceedings{garg2025graph,
   title     = {Detecting Illicit Massage Businesses by Leveraging Graph Machine Learning},
-  author    = {Garg, Vasuki and Özaltın, Y. Osman and Mayorga, E. Maria and Caltigirone, Sherrie},
+  author    = {Garg, Vasuki and Özaltın, Y. Osman and Mayorga, E. Maria and Bosisto, Sherrie},
   booktitle = {Proceedings of the Thirty-Fourth International Joint Conference on
                Artificial Intelligence, {IJCAI-25}},
   publisher = {International Joint Conferences on Artificial Intelligence Organization},

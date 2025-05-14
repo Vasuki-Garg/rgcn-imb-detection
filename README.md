@@ -11,7 +11,7 @@ This repository contains the official implementation for our **IJCAI 2025** pape
 
 ## Dataset Description:
 This dataset is constructed by integrating multi-source information to build an information-rich heterogeneous graph for detecting illicit massage businesses (IMBs). It combines business-level metadata, review content, reviewer information, geospatial features, and demographic indicators to support relational learning and classification.
-The dataset consists of the following feature categories (Nodes):
+The dataset consists:
 
 ### Business Features
 Derived from Yelp and RubMaps business metadata, GIS data, the U.S. Census Bureau, and the National Land Cover Database (NLCD). These are primarily binary features, created through quantile-based thresholding or one-hot encoding:

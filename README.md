@@ -7,7 +7,7 @@ This repository contains the official implementation for our **IJCAI 2025** pape
 ---
 
 ## Dataset Download and Setup
-**[Click here to download the synthetic dataset from Google Drive]**
+**[Click here to download the synthetic dataset from Google Drive](https://drive.google.com/file/d/1OgXC8gQJ-fD0XDf_nzB_GT0RBdJLbBHV/view?usp=sharing)**
 
 ## Dataset Description:
 This dataset is constructed by integrating multi-source information to build an information-rich heterogeneous graph for detecting illicit massage businesses (IMBs). It combines business-level metadata, review content, reviewer information, geospatial features, and demographic indicators to support relational learning and classification.

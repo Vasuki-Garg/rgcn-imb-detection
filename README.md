@@ -33,11 +33,17 @@ Extracted from Yelp review texts using NLP techniques and pre-trained models. Th
 ```
 review_vector, roberta_neu, roberta_pos, roberta_neg, 
 reviewRating, lexicon_score, lexicon_prediction
+
+review_feat1, roberta_feat1, roberta_feat2, roberta_feat3, 
+review_feat2, lexicon_feat1, lexicon_feat2
+
 ```
 ### Reviewer Features
 Based on Yelp user metadata and enriched using external tools (e.g., gender prediction libraries):
 ```
 authorName, authorGender
+
+author_feat1, author_feat2
 ```
 ### Label
 A binary classification label indicating whether a business is illicit (1) or non-illicit (0). The label is derived from RubMaps review activity and business license status.

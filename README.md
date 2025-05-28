@@ -16,16 +16,17 @@ The dataset consists:
 ### Business Features
 Derived from Yelp and RubMaps business metadata, GIS data, the U.S. Census Bureau, and the National Land Cover Database (NLCD). These are primarily binary features, created through quantile-based thresholding or one-hot encoding:
 ```
-yelp_close9, yelp_close10, yelp_close11, 
-yelp_avg_rating_moreThan4, yelp_avg_rating_lessThan2, 
-yelp_reviewRating_min_is5, yelp_reviewRating_max_is1, 
-yelp_massageCat, yelp_spaCat, yelp_phone_advertisement, 
-yelp_business_name_combine, yelp_category_reflexology, 
-owner_listed_worker_out_of_state, min_dist_base_high, min_dist_base_low, 
-min_dist_police_low, census_pct_nonwhite_high, census_avg_household_size_high, 
-census_pct_20_to_29_low, census_pct_housing_vacant_low, 
-census_pct_households_with_children_low, census_pct_over25_with_bachelors_low, 
-census_pct_manufacturing_industry_low, landcover_type_developed_high_intensity
+yelp_feat1, yelp_feat2, yelp_feat3, 
+yelp_feat4, yelp_feat5, 
+yelp_feat6, yelp_feat7, 
+yelp_feat8, yelp_feat9, yelp_feat10, 
+yelp_feat11, yelp_feat12, 
+licence_feat1, gis_feat1, gis_feat2, 
+gis_feat3, census_feat1, census_feat2, 
+census_feat3, census_feat4, 
+census_feat5, census_feat6, 
+census_feat7, landcover_feat1
+
 ```
 ### Review Features
 Extracted from Yelp review texts using NLP techniques and pre-trained models. These are numerical features, including dense embeddings and sentiment scores:

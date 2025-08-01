@@ -30,8 +30,8 @@ def index_columns(df):
     biz2idx = indexing(df['bizId'])
     reviewer2idx = indexing(df['authorName'])
 
-    df['revIdx'] = df['review_vector'].map(rev2idx)
+    df['revIdx'] = df['review_feat1'].map(rev2idx)
     df['bizIdx'] = df['bizId'].map(biz2idx)
-    df['reviewerIdx'] = df['authorName'].map(reviewer2idx)
+    df['reviewerIdx'] = df['author_feat1'].map(reviewer2idx)
 
     return df, rev2idx, biz2idx, reviewer2idx

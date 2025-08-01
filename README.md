@@ -116,7 +116,7 @@ This runs:
 ---
 
 ## About the Authors
-**Vasuki Garg** is a PhD student in Industrial and Systems Engineering at NC State University. He holds an MS from Politecnico di Milano, Italy and a BEng from the University of Southampton, UK. His research applies machine learning and optimization to social impact problems, including human trafficking detection and decision-focused modeling. He specializes in graph ML, NLP, and data-driven analytics.
+**Vasuki Garg** is a PhD student in Industrial and Systems Engineering at NC State University. He holds an MS from Politecnico di Milano, Italy and a BEng from the University of Southampton, UK. His research applies machine learning and optimization to social impact problems, including human trafficking detection and decision-focused modeling. He specializes in graph ML, NLP, data-driven analytics, and optimization.
 
 **Osman Y. Özaltın** is an Associate Professor in Industrial and Systems Engineering at NC State and a member of the Personalized Medicine Faculty Cluster. He holds MS and PhD degrees from the University of Pittsburgh. His research focuses on mathematical programming for personalized medical decisions and illicit supply chains, using methods like integer and bilevel programming.
 

@@ -26,9 +26,9 @@ def index_columns(df):
     def indexing(series, offset=0):
         return {k: v + offset for v, k in enumerate(series.value_counts().index.values)}
 
-    rev2idx = indexing(df['review_vector'])
+    rev2idx = indexing(df['review_feat1'])
     biz2idx = indexing(df['bizId'])
-    reviewer2idx = indexing(df['authorName'])
+    reviewer2idx = indexing(df['author_feat1'])
 
     df['revIdx'] = df['review_feat1'].map(rev2idx)
     df['bizIdx'] = df['bizId'].map(biz2idx)

@@ -134,18 +134,20 @@ This repository includes a dummy dataset for demonstration purposes. The origina
 If you use the dataset, code or find our work useful, please cite our paper:
 
 ```bibtex
-@inproceedings{garg2025graph,
+@inproceedings{ijcai2025p1072,
   title     = {Detecting Illicit Massage Businesses by Leveraging Graph Machine Learning},
-  author    = {Garg, Vasuki and Özaltın, Y. Osman and Mayorga, E. Maria and Bosisto, Sherrie},
+  author    = {Garg, Vasuki and Özaltın, Osman Y. and Mayorga, Maria E. and Bosisto, Sherrie},
   booktitle = {Proceedings of the Thirty-Fourth International Joint Conference on
                Artificial Intelligence, {IJCAI-25}},
   publisher = {International Joint Conferences on Artificial Intelligence Organization},
-  editor    = {XYZ},
-  pages     = {5689-5697},
-  month     = {8},
+  editor    = {James Kwok},
+  pages     = {9647--9655},
   year      = {2025},
-  note      = {AI and Social Good Track},
-  url       = {https://github.com/Vasuki-Garg/rgcn-imb-detection}
+  month     = {8},
+  note      = {AI and Social Good},
+  doi       = {10.24963/ijcai.2025/1072},
+  url       = {https://doi.org/10.24963/ijcai.2025/1072},
+}
 ```
 
 
